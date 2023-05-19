@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">JetAnimeList</string>
+
+    <string name="image_desc">This is a key visual image of the anime titled %s</string>
+    <string name="pp_desc">This is user profile</string>
+    <string name="eps_count">%1$d / %2$d</string>
+    <string name="eps_watched">Episodes watched :</string>
+    <string name="remove_watchlist">Remove %s from watch list</string>
+    <string name="arrow_back">Back to previous page</string>
+    <string name="average_score">Average Score</string>
+    <string name="total_eps">Total Episode</string>
+    <string name="status">Status</string>
+    <string name="genre">Genre</string>
+    <string name="description">Synopsis</string>
+    <string name="add_to_watchlist">Add to Watch list</string>
+    <string name="failed_to_load">Failed to Load Data</string>
+    <string name="watchlist">Watch List</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="total_watchlist">Total : %d anime</string>
+    <string name="user_name">Utsman Abdurrahman</string>
+    <string name="user_email">snubyellow@gmail.com</string>
+    <string name="empty_list">Watch list is empty</string>
+    <string name="search_field">Search</string>
+</resources>
