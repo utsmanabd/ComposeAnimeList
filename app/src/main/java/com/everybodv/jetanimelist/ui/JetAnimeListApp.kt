@@ -103,9 +103,13 @@ private fun BottomBar(
             ),
         )
         BottomNavigation {
+            val aboutPage = stringResource(id = R.string.profile)
             navigationItem.map { item ->
                 BottomNavigationItem(
-                    icon = { Icon(imageVector = item.icon, contentDescription = item.title) },
+                    icon = { Icon(
+                        imageVector = item.icon,
+                        contentDescription = if (item.title == aboutPage) "about_page" else item.title
+                    ) },
                     label = { Text(text = item.title) },
                     selected = currentRoute == item.screen.route,
                     onClick = {

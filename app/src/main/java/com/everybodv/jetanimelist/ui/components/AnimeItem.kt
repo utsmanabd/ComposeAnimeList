@@ -1,8 +1,6 @@
 package com.everybodv.jetanimelist.ui.components
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -26,12 +24,15 @@ fun AnimeItem(
     title: String,
     modifier: Modifier = Modifier
 ) {
-    Column(modifier = modifier.padding(12.dp)) {
+    Column(
+        modifier = modifier.padding(8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         AsyncImage(
             model = imageUrl,
             contentDescription = stringResource(id = R.string.image_desc, title),
             alignment = Alignment.Center,
-            modifier = Modifier
+            modifier = Modifier.width(120.dp)
                 .fillMaxHeight().shadow(8.dp).clip(RoundedCornerShape(8.dp))
         )
         Text(
@@ -41,7 +42,7 @@ fun AnimeItem(
             style = MaterialTheme.typography.subtitle1.copy(
                 fontWeight = FontWeight.ExtraBold
             ),
-            modifier = Modifier.padding(top = 8.dp)
+            modifier = Modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp)
         )
     }
 }

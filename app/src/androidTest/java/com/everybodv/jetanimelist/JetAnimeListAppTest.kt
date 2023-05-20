@@ -47,7 +47,7 @@ class JetAnimeListAppTest {
     fun navHost_bottomNavigation_working() {
         composeTestRule.onNodeWithStringId(R.string.watchlist).performClick()
         navController.assertCurrentRouteName(NavigationScreen.WatchList.route)
-        composeTestRule.onNodeWithStringId(R.string.profile).performClick()
+        composeTestRule.onNodeWithContentDescription("about_page").performClick()
         navController.assertCurrentRouteName(NavigationScreen.Profile.route)
         composeTestRule.onNodeWithStringId(R.string.home).performClick()
         navController.assertCurrentRouteName(NavigationScreen.Home.route)

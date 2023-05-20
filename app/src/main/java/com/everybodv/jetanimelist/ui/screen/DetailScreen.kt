@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
@@ -82,7 +83,7 @@ fun DetailContent(
 ) {
     val epsCount by rememberSaveable { mutableStateOf(count) }
     val titleStyle = MaterialTheme.typography.subtitle1.copy(fontSize = 12.sp, fontWeight = FontWeight.Light)
-    
+
     Column(modifier = modifier) {
         TopAppBar(
             backgroundColor = MaterialTheme.colors.primaryVariant,
@@ -111,9 +112,11 @@ fun DetailContent(
                     model = imageUrl,
                     contentDescription = stringResource(id = R.string.image_desc),
                     modifier = Modifier
+                        .width(160.dp)
                         .fillMaxHeight()
-                        .clip(RoundedCornerShape(8.dp))
                         .shadow(4.dp)
+                        .clip(RoundedCornerShape(8.dp)),
+                    alignment = Alignment.Center
                 )
                 Column(modifier = modifier.padding(start = 16.dp)) {
                     Text(
